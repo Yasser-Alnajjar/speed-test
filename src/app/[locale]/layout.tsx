@@ -21,7 +21,7 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: "ar" | "en" };
+  params: Promise<{ locale: "ar" | "en" }>;
 }) {
   const locale = (await params).locale;
   let messages;
